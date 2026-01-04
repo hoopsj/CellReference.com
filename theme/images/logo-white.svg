@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="2" y="2" width="96" height="96" fill="none" stroke="#fff" stroke-width="4"/>
+  <text x="27" y="50" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 700; font-size: 42px; fill: #fff;">C</text>
+  <text x="50" y="48" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 700; font-size: 42px; fill: #fff;">:</text>
+  <text x="73" y="50" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 700; font-size: 42px; fill: #fff;">R</text>
+</svg>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - Cell Reference</title>
+    <link rel="icon" type="image/svg+xml" href="https://hoopsj.github.io/CellReference.com/theme/images/favicon.svg">
+    <link rel="stylesheet" href="https://hoopsj.github.io/CellReference.com/theme/css/style.css">
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript></head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="https://hoopsj.github.io/CellReference.com/" class="site-logo">
+                <svg class="logo-img" width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="96" height="96" fill="none" stroke="#fff" stroke-width="4"/>
+                    <text x="27" y="50" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 600; font-size: 42px; fill: #fff;">C</text>
+                    <text x="50" y="48" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 600; font-size: 42px; fill: #fff;">:</text>
+                    <text x="73" y="50" text-anchor="middle" dominant-baseline="central" style="font-family: 'Consolas', 'Monaco', monospace; font-weight: 600; font-size: 42px; fill: #fff;">R</text>
+                </svg>
+                <span>Cell Reference</span>
+            </a>
+            
+                <div class="search-bar">
+        <div class="search-input-wrapper">
+            <input type="text" placeholder="Search..." id="header-search-input" autocomplete="off" oninput="window.doSearch && window.doSearch(this.value, 'header')">
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        </div>
+        <div class="search-results" id="header-search-results"></div>
+    </div>
+
+            
+            <nav class="header-nav">
+                <a href="https://hoopsj.github.io/CellReference.com/">Home</a>
+                <a href="https://hoopsj.github.io/CellReference.com/categories">Categories</a>
+                <a href="https://hoopsj.github.io/CellReference.com/articles">Articles</a>
+            </nav>
+            
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <span>Navigation</span>
+            <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-search">
+                <div class="search-bar">
+        <div class="search-input-wrapper">
+            <input type="text" placeholder="Search..." id="mobile-search-input" autocomplete="off" oninput="window.doSearch && window.doSearch(this.value, 'mobile')">
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        </div>
+        <div class="search-results" id="mobile-search-results"></div>
+    </div>
+
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="https://hoopsj.github.io/CellReference.com/">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/></svg>
+                Home
+            </a>
+            <a href="https://hoopsj.github.io/CellReference.com/categories">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                Categories
+            </a>
+            <a href="https://hoopsj.github.io/CellReference.com/articles">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                Articles
+            </a>
+        </nav>
+    </div>
+
+    <script>
+    // Load search data from search.json for site-wide search
+    (function() {
+        fetch('https://hoopsj.github.io/CellReference.com/search.json')
+            .then(function(response) { return response.json(); })
+            .then(function(data) { window.SEARCH_ARTICLES = data; })
+            .catch(function() { window.SEARCH_ARTICLES = []; });
+    })();
+    
+    window.doSearch = function(query, prefix) {
+        var results = document.getElementById(prefix + '-search-results');
+        if (!window.SEARCH_ARTICLES || !results) { return; }
+        query = query.toLowerCase().trim();
+        if (query.length < 2) { results.style.display = 'none'; return; }
+        var html = '';
+        for (var i = 0; i < window.SEARCH_ARTICLES.length; i++) {
+            var a = window.SEARCH_ARTICLES[i];
+            if ((a.title + ' ' + a.category).toLowerCase().indexOf(query) !== -1) {
+                html += '<a href="' + a.url + '" class="search-result-item"><span class="search-result-title">' + a.title + '</span><span class="search-result-category">' + a.category + '</span></a>';
+            }
+        }
+        results.innerHTML = html || '<div class="search-no-results">No results</div>';
+        results.style.display = 'block';
+    };
+    </script>
+
+    <main class="content">
+<div class="categories-page">
+    <section class="welcome">
+        <h1>Categories</h1>
+        <p>Browse articles by category.</p>
+    </section>
+
+    <div class="category-filter">
+        <input type="text" id="category-filter-input" placeholder="Search categories..." autocomplete="off">
+        
+        <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        
+    </div>
+    
+    <div class="category-tree" id="category-tree">
+        <div class="category-tree-root collapsed" data-name="beginner" data-letter="B" data-articles="pivot tables::article/pivot-tables|||vlookup function::article/vlookup-function">
+            <a href="https://hoopsj.github.io/CellReference.com/category/beginner" class="category-tree-link root">
+                <span class="category-tree-name">Beginner&nbsp;</span>
+                <span class="category-tree-count">(2)</span>
+            </a>
+        </div>
+        <div class="category-tree-root collapsed" data-name="features" data-letter="F" data-articles="">
+            <a href="https://hoopsj.github.io/CellReference.com/category/features" class="category-tree-link root">
+                <span class="category-tree-name">Features&nbsp;</span>
+                <span class="category-tree-count">(1)</span>
+                <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+                    <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="category-tree-children">
+                <li class="category-tree-item collapsed" data-name="data analysis" data-articles="pivot tables::article/pivot-tables">
+    <a href="https://hoopsj.github.io/CellReference.com/category/features/data-analysis" class="category-tree-link">
+        <span class="category-tree-name">Data Analysis&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+
+            </ul>
+        </div>
+        <div class="category-tree-root collapsed" data-name="functions" data-letter="F" data-articles="">
+            <a href="https://hoopsj.github.io/CellReference.com/category/functions" class="category-tree-link root">
+                <span class="category-tree-name">Functions&nbsp;</span>
+                <span class="category-tree-count">(4)</span>
+                <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+                    <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="category-tree-children">
+                <li class="category-tree-item collapsed" data-name="lookup" data-articles="index match::article/index-match|||vlookup function::article/vlookup-function|||xlookup function::article/xlookup-function">
+    <a href="https://hoopsj.github.io/CellReference.com/category/functions/lookup" class="category-tree-link">
+        <span class="category-tree-name">Lookup&nbsp;</span>
+        <span class="category-tree-count">(3)</span>
+        <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+            <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+        </svg>
+    </a>
+        <ul class="category-tree-children">
+            <li class="category-tree-item collapsed" data-name="advanced" data-articles="index match::article/index-match">
+    <a href="https://hoopsj.github.io/CellReference.com/category/functions/lookup/advanced" class="category-tree-link">
+        <span class="category-tree-name">Advanced&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+
+        </ul>
+</li>
+<li class="category-tree-item collapsed" data-name="math" data-articles="sumif function::article/sumif-function">
+    <a href="https://hoopsj.github.io/CellReference.com/category/functions/math" class="category-tree-link">
+        <span class="category-tree-name">Math&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+
+            </ul>
+        </div>
+        <div class="category-tree-root collapsed" data-name="shortcuts" data-letter="S" data-articles="">
+            <a href="https://hoopsj.github.io/CellReference.com/category/shortcuts" class="category-tree-link root">
+                <span class="category-tree-name">Shortcuts&nbsp;</span>
+                <span class="category-tree-count">(2)</span>
+                <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+                    <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="category-tree-children">
+                <li class="category-tree-item collapsed" data-name="formatting" data-articles="formatting shortcuts::article/formatting-shortcuts">
+    <a href="https://hoopsj.github.io/CellReference.com/category/shortcuts/formatting" class="category-tree-link">
+        <span class="category-tree-name">Formatting&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+<li class="category-tree-item collapsed" data-name="navigation" data-articles="navigation shortcuts::article/navigation-shortcuts">
+    <a href="https://hoopsj.github.io/CellReference.com/category/shortcuts/navigation" class="category-tree-link">
+        <span class="category-tree-name">Navigation&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="category-filter-empty" id="category-filter-empty" style="display: none;">
+        No matching categories or articles found.
+    </div>
+</div>
+
+<script>
+(function() {
+    const input = document.getElementById('category-filter-input');
+    const tree = document.getElementById('category-tree');
+    const emptyMsg = document.getElementById('category-filter-empty');
+    
+    if (!input || !tree) return;
+    
+    // Add match indicator spans to each category
+    tree.querySelectorAll('[data-name]').forEach(el => {
+        const indicator = document.createElement('span');
+        indicator.className = 'filter-match-indicator';
+        const moreSpan = el.querySelector(':scope > .category-tree-more');
+        const link = el.querySelector(':scope > .category-tree-link');
+        if (moreSpan) {
+            moreSpan.after(indicator);
+        } else if (link) {
+            link.after(indicator);
+        }
+        el._indicator = indicator;
+    });
+    
+    // Toggle expand/collapse on click for all levels
+    tree.querySelectorAll('.category-tree-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.closest('.category-tree-root, .category-tree-item');
+            if (parent) {
+                parent.classList.toggle('collapsed');
+            }
+        });
+    });
+    
+    function parseItems(str) {
+        if (!str) return [];
+        return str.split('|||').filter(s => s.trim()).map(item => {
+            const [name, url] = item.split('::');
+            return { name: name || '', url: url || '' };
+        });
+    }
+    
+    function titleCase(str) {
+        return str.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    }
+    
+    input.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        
+        // Clear all indicators
+        tree.querySelectorAll('.filter-match-indicator').forEach(el => {
+            el.innerHTML = '';
+        });
+        
+        if (!query) {
+            // Show everything, restore collapsed state
+            tree.querySelectorAll('[data-name]').forEach(el => {
+                el.classList.remove('filter-hidden', 'filter-match');
+            });
+            tree.querySelectorAll('.category-tree-root, .category-tree-item').forEach(item => {
+                item.classList.add('collapsed');
+                item.classList.remove('no-visible-children');
+            });
+            emptyMsg.style.display = 'none';
+            return;
+        }
+        
+        // First, hide everything
+        tree.querySelectorAll('[data-name]').forEach(el => {
+            el.classList.add('filter-hidden');
+            el.classList.remove('filter-match', 'no-visible-children');
+        });
+        
+        // Find matches and show them + their ancestors
+        let hasMatches = false;
+        tree.querySelectorAll('[data-name]').forEach(el => {
+            const name = el.dataset.name || '';
+            const articles = parseItems(el.dataset.articles);
+            const subcategories = parseItems(el.dataset.subcategories);
+            
+            const nameMatches = name.includes(query);
+            const matchingArticles = articles.filter(a => a.name.includes(query));
+            const matchingSubcats = subcategories.filter(s => s.name.includes(query));
+            
+            if (nameMatches || matchingArticles.length > 0 || matchingSubcats.length > 0) {
+                hasMatches = true;
+                el.classList.remove('filter-hidden');
+                el.classList.add('filter-match');
+                
+                const indicator = el._indicator;
+                if (indicator && (matchingArticles.length > 0 || matchingSubcats.length > 0)) {
+                    indicator.appendChild(document.createTextNode(' → '));
+                    
+                    let allItems = [];
+                    
+                    matchingArticles.slice(0, 3).forEach(article => {
+                        allItems.push({ type: 'article', name: article.name, url: article.url });
+                    });
+                    
+                    matchingSubcats.slice(0, 3).forEach(subcat => {
+                        allItems.push({ type: 'subcat', name: subcat.name, url: subcat.url });
+                    });
+                    
+                    allItems.forEach((item, i) => {
+                        const link = document.createElement('a');
+                        link.href = '/' + item.url;
+                        link.className = 'filter-match-link' + (item.type === 'subcat' ? ' filter-match-subcat' : '');
+                        link.textContent = titleCase(item.name);
+                        indicator.appendChild(link);
+                        
+                        if (i < allItems.length - 1) {
+                            indicator.appendChild(document.createTextNode(', '));
+                        }
+                    });
+                    
+                    const totalOverflow = Math.max(0, matchingArticles.length - 3) + Math.max(0, matchingSubcats.length - 3);
+                    if (totalOverflow > 0) {
+                        indicator.appendChild(document.createTextNode(', +' + totalOverflow + ' more'));
+                    }
+                }
+                
+                // Show all ancestors and expand them
+                let parent = el.parentElement;
+                while (parent && parent !== tree) {
+                    if (parent.dataset && parent.dataset.name !== undefined) {
+                        parent.classList.remove('filter-hidden', 'collapsed');
+                    }
+                    if (parent.classList && parent.classList.contains('category-tree-root')) {
+                        parent.classList.remove('filter-hidden', 'collapsed');
+                    }
+                    if (parent.classList && parent.classList.contains('category-tree-item')) {
+                        parent.classList.remove('filter-hidden', 'collapsed');
+                    }
+                    parent = parent.parentElement;
+                }
+            }
+        });
+        
+        emptyMsg.style.display = hasMatches ? 'none' : 'block';
+        
+        // Hide arrows for categories with no visible children
+        tree.querySelectorAll('.category-tree-root, .category-tree-item').forEach(item => {
+            const children = item.querySelector(':scope > .category-tree-children');
+            if (children) {
+                const visibleChildren = children.querySelectorAll(':scope > .category-tree-item:not(.filter-hidden)');
+                if (visibleChildren.length === 0) {
+                    item.classList.add('no-visible-children');
+                }
+            }
+        });
+        
+        // Fix last visible root styling
+        tree.querySelectorAll('.category-tree-root').forEach(root => {
+            root.classList.remove('last-visible');
+        });
+        const visibleRoots = tree.querySelectorAll('.category-tree-root:not(.filter-hidden)');
+        if (visibleRoots.length > 0) {
+            visibleRoots[visibleRoots.length - 1].classList.add('last-visible');
+        }
+    });
+})();
+</script>
+
+        <footer class="site-footer">
+            <span class="copyright">© HM One LLC</span>
+            <nav class="footer-links">
+                <a href="https://hoopsj.github.io/CellReference.com/about/">About</a>
+                <a href="https://hoopsj.github.io/CellReference.com/privacy-policy/">Privacy Policy</a>
+                <a href="https://hoopsj.github.io/CellReference.com/terms/">Terms</a>
+            </nav>
+        </footer>
+    </main>
+
+    
+    <script>
+    // Mobile menu toggle
+    (function() {
+        var hamburger = document.getElementById('hamburger-btn');
+        var closeBtn = document.getElementById('mobile-menu-close');
+        var overlay = document.getElementById('mobile-menu-overlay');
+        var menu = document.getElementById('mobile-menu');
+        
+        function openMenu() {
+            menu.classList.add('open');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMenu() {
+            menu.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        
+        if (hamburger) hamburger.onclick = openMenu;
+        if (closeBtn) closeBtn.onclick = closeMenu;
+        if (overlay) overlay.onclick = closeMenu;
+    })();
+    
+    // Close search results on click outside
+    document.onclick = function(e) {
+        if (!e.target.closest('.search-bar')) {
+            var results = document.querySelectorAll('.search-results');
+            results.forEach(function(r) { r.style.display = 'none'; });
+        }
+    };
+    </script>
+</body>
+</html>
