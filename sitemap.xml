@@ -16,48 +16,6 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cellreference.com/article/index-match</loc>
-        <lastmod>2025-01-16</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/vlookup-function</loc>
-        <lastmod>2025-01-15</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/xlookup-function</loc>
-        <lastmod>2025-01-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/navigation-shortcuts</loc>
-        <lastmod>2025-01-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/pivot-tables</loc>
-        <lastmod>2025-01-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/formatting-shortcuts</loc>
-        <lastmod>2025-01-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cellreference.com/article/sumif-function</loc>
-        <lastmod>2025-01-10</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
         <loc>https://cellreference.com/about</loc>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
