@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cell Reference - Answers to Your Spreadsheet Questions</title>
+    <title>Cell Reference - Grouping</title>
     
-<meta name="description" content="Find answers to your spreadsheet questions. Clear, practical documentation to help you work smarter with your data.">
+<meta name="description" content="Browse all Grouping articles on Cell Reference. Clear, practical documentation to help you answer your spreadsheet questions.">
     
     <link rel="canonical" href="https://cellreference.com/">
     
@@ -141,42 +141,147 @@
     </script>
 
     <main class="content">
-<div class="homepage">
-    <section class="welcome">
-        <h1>Welcome to Cell Reference</h1>
-        <p>A cell reference helps you locate data. CellReference.com helps you locate answers to your spreadsheet questions.</p>
-    </section>
+<div class="categories-page">
+    <nav class="breadcrumbs">
+        <a href="https://cellreference.com/category/excel">Excel</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="https://cellreference.com/category/excel/features">Features</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Grouping</span>
+    </nav>
+    
+    <div class="welcome">
+        <h1>Grouping <span class="article-count">(1)</span></h1>
+        <p>Browse the Excel › Features › Grouping category.</p>
+    </div>
 
-    <section class="featured-section">
-        <h2>Featured Articles</h2>
-        <div class="article-cards">
-            
-            <a href="https://cellreference.com/article/how-to-group-rows-in-excel/" class="article-card">
-                <img src="https://cellreference.com/images/excel/features/grouping/card_wide.svg" alt="How to Group Rows in Excel: A Visual Guide">
-                <div class="article-card-content">
-                    <span class="article-meta">Last updated: 07 January 2026</span>
+
+    <section class="articles-section">
+        <h2>Articles</h2>
+        
+        <div class="category-filter">
+            <input type="text" id="article-filter-input" placeholder="Search articles..." autocomplete="off">
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        </div>
+        
+        <div class="article-list" id="article-list">
+            <a href="https://cellreference.com/article/how-to-group-rows-in-excel/" class="article-list-item" data-title="how to group rows in excel: a visual guide" data-summary="step-by-step visual guide to grouping rows in excel. see exactly where to click and how to collapse and expand your data.">
+                <div class="article-list-img">
+                    <img src="https://cellreference.com/images/excel/features/grouping/card.svg" alt="How to Group Rows in Excel: A Visual Guide">
+                </div>
+                <div class="article-list-content">
                     <h3>How to Group Rows in Excel: A Visual Guide</h3>
-                    <p>Step-by-step visual guide to grouping rows in Excel. See exactly where to click and how to...</p>
+                    <p>Step-by-step visual guide to grouping rows in Excel. See exactly where to click and how to collapse and expand your data.</p>
+                    <span class="article-meta">Last updated: 07 January 2026</span>
                 </div>
             </a>
         </div>
-        <a href="https://cellreference.com/articles/" class="view-all-btn">View All Articles →</a>
+        
+        <div class="category-filter-empty" id="filter-empty" style="display: none;">
+            No matching articles found.
+        </div>
+        
+        <nav class="pagination" id="pagination"></nav>
     </section>
 
-    <section class="categories-section">
-        <h2>Featured Categories</h2>
-        <div class="category-cards">
-            
-                <a href="https://cellreference.com/category/excel/features/grouping" class="category-card">
-                    <div class="category-img">
-                        <img src="https://cellreference.com/images/excel/features/grouping/card.svg" alt="Grouping">
-                    </div>
-                    <div class="category-name">Excel › Features › Grouping</div>
-                </a>
-        </div>
-        <a href="https://cellreference.com/categories/" class="view-all-btn">View All Categories →</a>
-    </section>
 </div>
+
+<script>
+(function() {
+    var ITEMS_PER_PAGE = 5;
+    var list = document.getElementById('article-list');
+    var pagination = document.getElementById('pagination');
+    var filterInput = document.getElementById('article-filter-input');
+    var emptyMsg = document.getElementById('filter-empty');
+    
+    if (!list || !filterInput) return;
+    
+    var allItems = Array.from(list.querySelectorAll('.article-list-item'));
+    var filteredItems = allItems;
+    var currentPage = 1;
+
+    function showPage(page) {
+        var items = filteredItems;
+        var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+        currentPage = Math.max(1, Math.min(page, totalPages || 1));
+        
+        var start = (currentPage - 1) * ITEMS_PER_PAGE;
+        var end = start + ITEMS_PER_PAGE;
+        
+        allItems.forEach(function(item) {
+            item.style.display = 'none';
+        });
+        
+        items.forEach(function(item, i) {
+            item.style.display = (i >= start && i < end) ? 'flex' : 'none';
+        });
+        
+        renderPagination();
+    }
+
+    function renderPagination() {
+        var items = filteredItems;
+        var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
+        
+        if (totalPages <= 1) {
+            pagination.style.display = 'none';
+            return;
+        }
+        
+        pagination.style.display = 'flex';
+        var html = '';
+        
+        if (currentPage > 1) {
+            html += '<a href="#" class="pagination-btn pagination-prev" data-page="' + (currentPage - 1) + '">← Previous</a>';
+        } else {
+            html += '<span class="pagination-btn pagination-prev disabled">← Previous</span>';
+        }
+        
+        html += '<span class="pagination-info">Page ' + currentPage + ' of ' + totalPages + '</span>';
+        
+        if (currentPage < totalPages) {
+            html += '<a href="#" class="pagination-btn pagination-next" data-page="' + (currentPage + 1) + '">Next →</a>';
+        } else {
+            html += '<span class="pagination-btn pagination-next disabled">Next →</span>';
+        }
+        
+        pagination.innerHTML = html;
+        
+        pagination.querySelectorAll('a[data-page]').forEach(function(btn) {
+            btn.onclick = function(e) {
+                e.preventDefault();
+                showPage(parseInt(this.getAttribute('data-page')));
+                window.scrollTo({ top: list.offsetTop - 100, behavior: 'smooth' });
+            };
+        });
+    }
+
+    filterInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        
+        if (!query) {
+            filteredItems = allItems;
+        } else {
+            filteredItems = allItems.filter(function(item) {
+                var title = item.dataset.title || '';
+                var summary = item.dataset.summary || '';
+                return title.includes(query) || summary.includes(query);
+            });
+        }
+        
+        emptyMsg.style.display = filteredItems.length === 0 ? 'block' : 'none';
+        currentPage = 1;
+        showPage(1);
+    });
+
+    showPage(1);
+})();
+</script>
 
         <footer class="site-footer">
             <span class="copyright">© HM One LLC</span>

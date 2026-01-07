@@ -542,6 +542,12 @@ a:hover {
     gap: 16px;
 }
 
+@media (min-width: 769px) {
+    .category-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    }
+}
+
 .category-card {
     background: white;
     outline: 1px solid var(--color-border);
@@ -645,6 +651,39 @@ a:hover {
     width: 100%;
     border: 1px solid var(--color-border);
     display: block;
+}
+
+.text-image-pair {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.text-image-pair p:last-child {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+}
+
+.text-image-pair img {
+    max-width: 360px;
+    height: auto;
+    border: 1px solid var(--color-border);
+    border-bottom: none;
+}
+
+.text-image-pair p:last-child::after {
+    content: attr(data-alt);
+    display: block;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--color-text-light);
+    text-align: center;
 }
 
 .article-body figure figcaption {
@@ -1077,7 +1116,7 @@ nav.article-toc .toc-list ul a {
     transition: outline-color 0.2s, box-shadow 0.2s;
     text-decoration: none;
     color: var(--color-text);
-    min-height: 120px;
+    height: 120px;
 }
 
 .article-list-item:hover {
@@ -1088,7 +1127,7 @@ nav.article-toc .toc-list ul a {
 
 .article-list-img {
     flex-shrink: 0;
-    width: 120px;
+    aspect-ratio: 1 / 1;
     align-self: stretch;
     overflow: hidden;
 }
@@ -1392,6 +1431,15 @@ nav.article-toc .toc-list ul a {
         float: none;
         width: 100%;
         margin: 16px 0;
+    }
+    
+    .text-image-pair {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-image-pair p:last-child,
+    .text-image-pair img {
+        max-width: 100%;
     }
     
     .article-cards {

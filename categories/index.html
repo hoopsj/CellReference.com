@@ -147,8 +147,52 @@
         <p>Browse articles by category.</p>
     </section>
 
-    <div class="categories-empty">
-        <p>No categories yet. Articles will appear here once they're published with category metadata.</p>
+    <div class="category-filter">
+        <input type="text" id="category-filter-input" placeholder="Search categories..." autocomplete="off">
+        
+        <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        
+    </div>
+    
+    <div class="category-tree" id="category-tree">
+        <div class="category-tree-root collapsed" data-name="excel" data-letter="E" data-articles="">
+            <a href="https://cellreference.com/category/excel" class="category-tree-link root">
+                <span class="category-tree-name">Excel&nbsp;</span>
+                <span class="category-tree-count">(1)</span>
+                <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+                    <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+                </svg>
+            </a>
+            <ul class="category-tree-children">
+                <li class="category-tree-item collapsed" data-name="features" data-articles="">
+    <a href="https://cellreference.com/category/excel/features" class="category-tree-link">
+        <span class="category-tree-name">Features&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+        <svg class="category-tree-toggle" viewBox="0 0 16 16" width="16" height="16">
+            <polygon points="6,4 12,8 6,12" fill="currentColor"/>
+        </svg>
+    </a>
+        <ul class="category-tree-children">
+            <li class="category-tree-item collapsed" data-name="grouping" data-articles="how to group rows in excel: a visual guide::article/how-to-group-rows-in-excel/">
+    <a href="https://cellreference.com/category/excel/features/grouping" class="category-tree-link">
+        <span class="category-tree-name">Grouping&nbsp;</span>
+        <span class="category-tree-count">(1)</span>
+    </a>
+</li>
+
+        </ul>
+</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="category-filter-empty" id="category-filter-empty" style="display: none;">
+        No matching categories or articles found.
     </div>
 </div>
 
