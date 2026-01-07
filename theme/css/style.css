@@ -20,9 +20,8 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
 }
 
 body {
@@ -31,8 +30,16 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     font-size: 15px;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -46,10 +53,8 @@ a:hover {
 
 /* ========== HEADER ========== */
 .site-header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     height: var(--header-height);
     background: var(--color-primary);
     color: white;
@@ -357,14 +362,10 @@ a:hover {
 
 /* ========== MAIN CONTENT ========== */
 .content {
-    margin-top: var(--header-height);
-    height: calc(100vh - var(--header-height));
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;
 }
 
-.content > *:not(.site-footer):not(.article-toc):not(.article-wrapper) {
+.content > *:not(.article-toc):not(.article-wrapper) {
     max-width: var(--content-max-width);
     width: 100%;
     margin-left: auto;
@@ -385,8 +386,8 @@ a:hover {
 }
 
 .article-col-left .article-toc {
-    position: fixed;
-    top: calc(var(--header-height) + 32px);
+    position: sticky;
+    top: 32px;
     left: 24px;
     width: calc((100vw - var(--content-max-width)) / 2 - 48px);
 }
@@ -397,7 +398,6 @@ a:hover {
 
 /* ========== FOOTER ========== */
 .site-footer {
-    margin-top: auto;
     padding: 20px 24px;
     background: white;
     border-top: 1px solid var(--color-border);
@@ -1445,7 +1445,7 @@ nav.article-toc .toc-list ul a {
     .article-cards {
         grid-template-columns: 1fr;
     }
-    
+
     .site-footer {
         flex-direction: column;
         gap: 12px;
