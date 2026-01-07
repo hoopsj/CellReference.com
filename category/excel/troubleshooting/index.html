@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cell Reference - Browse All Articles and Search by Term</title>
+    <title>Cell Reference - Troubleshooting</title>
     
-<meta name="description" content="Browse all articles on Cell Reference. Clear, practical documentation to help you answer your spreadsheet questions.">
+<meta name="description" content="Browse all Troubleshooting articles on Cell Reference. Clear, practical documentation to help you answer your spreadsheet questions.">
     
-<link rel="canonical" href="https://cellreference.com/articles/">
+    <link rel="canonical" href="https://cellreference.com/">
     
     <meta property="og:site_name" content="Cell Reference">
     <meta property="og:image" content="https://cellreference.com/images/og-image.svg">
-<meta property="og:title" content="Cell Reference - Browse All Articles and Search by Term">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cellreference.com/articles/">
-<meta property="og:description" content="Browse all articles on Cell Reference. Clear, practical documentation to help you answer your spreadsheet questions.">
+    <meta property="og:title" content="Cell Reference">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cellreference.com/">
+    <meta property="og:description" content="Clear, practical documentation about spreadsheets and data analysis.">
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://cellreference.com/images/og-image.svg">
@@ -142,49 +142,51 @@
 
     <main class="content">
 <div class="categories-page">
+    <nav class="breadcrumbs">
+        <a href="https://cellreference.com/category/excel">Excel</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">Troubleshooting</span>
+    </nav>
+    
     <div class="welcome">
-        <h1>Articles</h1>
-        <p>Browse all articles.</p>
+        <h1>Troubleshooting <span class="article-count">(1)</span></h1>
+        <p>Browse the Excel › Troubleshooting category.</p>
     </div>
 
-    <div class="category-filter">
-        <input type="text" id="article-filter-input" placeholder="Search articles..." autocomplete="off">
-        <span class="search-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="10" cy="10" r="7"></circle>
-                <line x1="15" y1="15" x2="22" y2="22"></line>
-            </svg>
-        </span>
-    </div>
 
-    <div class="article-list" id="article-list">
-        <a href="https://cellreference.com/article/how-to-group-rows-in-excel/" class="article-list-item" data-title="how to group rows in excel: a visual guide" data-summary="step-by-step visual guide to grouping rows in excel. see exactly where to click and how to collapse and expand your data.">
-            <div class="article-list-img">
-                <img src="https://cellreference.com/images/excel/features/grouping/card.svg" alt="How to Group Rows in Excel: A Visual Guide">
-            </div>
-            <div class="article-list-content">
-                <h3>How to Group Rows in Excel: A Visual Guide</h3>
-                <p>Step-by-step visual guide to grouping rows in Excel. See exactly where to click and how to collapse and expand your data.</p>
-                <span class="article-meta">Last updated: 07 January 2026</span>
-            </div>
-        </a>
-        <a href="https://cellreference.com/article/how-to-unhide-all-rows-in-excel/" class="article-list-item" data-title="how to unhide all rows in excel: step-by-step guide" data-summary="learn how to unhide all rows in excel with simple step-by-step instructions. this guide shows you exactly what to do.">
-            <div class="article-list-img">
-                <img src="https://cellreference.com/images/excel/troubleshooting/unhide-rows/card.svg" alt="How to Unhide All Rows in Excel: Step-by-Step Guide">
-            </div>
-            <div class="article-list-content">
-                <h3>How to Unhide All Rows in Excel: Step-by-Step Guide</h3>
-                <p>Learn how to unhide all rows in Excel with simple step-by-step instructions. This guide shows you exactly what to do.</p>
-                <span class="article-meta">Last updated: 07 January 2026</span>
-            </div>
-        </a>
-    </div>
+    <section class="articles-section">
+        <h2>Articles</h2>
+        
+        <div class="category-filter">
+            <input type="text" id="article-filter-input" placeholder="Search articles..." autocomplete="off">
+            <span class="search-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="10" r="7"></circle>
+                    <line x1="15" y1="15" x2="22" y2="22"></line>
+                </svg>
+            </span>
+        </div>
+        
+        <div class="article-list" id="article-list">
+            <a href="https://cellreference.com/article/how-to-unhide-all-rows-in-excel/" class="article-list-item" data-title="how to unhide all rows in excel: step-by-step guide" data-summary="learn how to unhide all rows in excel with simple step-by-step instructions. this guide shows you exactly what to do.">
+                <div class="article-list-img">
+                    <img src="https://cellreference.com/images/excel/troubleshooting/unhide-rows/card.svg" alt="How to Unhide All Rows in Excel: Step-by-Step Guide">
+                </div>
+                <div class="article-list-content">
+                    <h3>How to Unhide All Rows in Excel: Step-by-Step Guide</h3>
+                    <p>Learn how to unhide all rows in Excel with simple step-by-step instructions. This guide shows you exactly what to do.</p>
+                    <span class="article-meta">Last updated: 07 January 2026</span>
+                </div>
+            </a>
+        </div>
+        
+        <div class="category-filter-empty" id="filter-empty" style="display: none;">
+            No matching articles found.
+        </div>
+        
+        <nav class="pagination" id="pagination"></nav>
+    </section>
 
-    <div class="category-filter-empty" id="filter-empty" style="display: none;">
-        No matching articles found.
-    </div>
-
-    <nav class="pagination" id="pagination"></nav>
 </div>
 
 <script>
@@ -194,16 +196,15 @@
     var pagination = document.getElementById('pagination');
     var filterInput = document.getElementById('article-filter-input');
     var emptyMsg = document.getElementById('filter-empty');
+    
+    if (!list || !filterInput) return;
+    
     var allItems = Array.from(list.querySelectorAll('.article-list-item'));
     var filteredItems = allItems;
     var currentPage = 1;
 
-    function getVisibleItems() {
-        return filteredItems;
-    }
-
     function showPage(page) {
-        var items = getVisibleItems();
+        var items = filteredItems;
         var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
         currentPage = Math.max(1, Math.min(page, totalPages || 1));
         
@@ -222,7 +223,7 @@
     }
 
     function renderPagination() {
-        var items = getVisibleItems();
+        var items = filteredItems;
         var totalPages = Math.ceil(items.length / ITEMS_PER_PAGE);
         
         if (totalPages <= 1) {
@@ -253,7 +254,7 @@
             btn.onclick = function(e) {
                 e.preventDefault();
                 showPage(parseInt(this.getAttribute('data-page')));
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: list.offsetTop - 100, behavior: 'smooth' });
             };
         });
     }
