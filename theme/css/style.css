@@ -1468,6 +1468,8 @@ nav.article-toc .toc-list ul a {
     
     .article-list-img {
         width: 90px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
     }
     
     .article-list-content {
